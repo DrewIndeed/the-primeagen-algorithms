@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        "outDir": "out_js",
+        "watch" : false
+    }
+}
