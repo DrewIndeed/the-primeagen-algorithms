@@ -1,12 +1,61 @@
 "use strict";
 exports.__esModule = true;
 var bubble_sort_1 = require("./bubble_sort");
-var queue_1 = require("./queue");
-var stack_1 = require("./stack");
+var Queue_1 = require("./Queue");
+var Stack_1 = require("./Stack");
+var SinglyLinkedList_1 = require("./SinglyLinkedList");
+// use Singly Linked List
+var testSLL = new SinglyLinkedList_1["default"]();
+console.log("\nPOPULATING");
+// test constructor
+console.log(testSLL);
+// test prepend
+testSLL.prepend(2);
+testSLL.prepend(1);
+// test append
+testSLL.append(3);
+testSLL.append(4);
+// test print
+testSLL.print(); // NORMAL
+// test invalid insertAt
+console.log("\nINSERT");
+// test insertAt
+testSLL.insertAt(8, 1);
+testSLL.insertAt(9, 2);
+// test print
+testSLL.print();
+// test failed insertAt
+testSLL.insertAt(10, -10);
+testSLL.insertAt(10, 10);
+// test getAt
+console.log("\nGETTING");
+var getAt0 = testSLL.getAt(0);
+console.log({ getAt0: getAt0 });
+var getAt6 = testSLL.getAt(6);
+console.log({ getAt6: getAt6 });
+var getAt2 = testSLL.getAt(2);
+console.log({ getAt2: getAt2 });
+testSLL.getAt(-10);
+testSLL.getAt(10);
+// test removeAt
+console.log("\nREMOVING");
+var removeAt1 = testSLL.removeAt(0);
+console.log({ removeAt1: removeAt1 });
+testSLL.print();
+var removeAt5 = testSLL.removeAt(5);
+console.log({ removeAt5: removeAt5 });
+testSLL.print();
+var removeAt2 = testSLL.removeAt(2);
+console.log({ removeAt2: removeAt2 });
+testSLL.print();
+// test invalid removeAt
+testSLL.removeAt(-10);
+testSLL.removeAt(10);
+console.log("\n------------------------------------------");
 // use bubble_sort
 console.log((0, bubble_sort_1["default"])([1, 3, 7, 4, 2, 9]));
 // use Queue
-var testQueue = new queue_1["default"]();
+var testQueue = new Queue_1["default"]();
 // test constructor
 console.log(testQueue);
 // test enqueue
@@ -24,7 +73,7 @@ var peek2 = testQueue.peek(); // 4
 // results
 console.log(dq1, dq2, peek1, dq3, peek2); // 1 2 3 3 4
 // use Stack
-var testStack = new stack_1["default"]();
+var testStack = new Stack_1["default"]();
 // test constructor
 console.log(testStack);
 // test push
