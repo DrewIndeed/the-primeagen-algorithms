@@ -5,7 +5,7 @@ const maze = [
     "xxxxxxxxxx x",
     "x        x x",
     "x        x x",
-    "x  xxxxxxx x",
+    "x xxxxxxxx x",
     "x          x",
     "x xxxxxxxxxx",
 ];

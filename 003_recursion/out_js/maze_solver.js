@@ -17,7 +17,7 @@ path // target path we need to build
     if (curr.x < 0 ||
         curr.x >= maze[0].length ||
         curr.y < 0 ||
-        curr.y >= maze[0].length)
+        curr.y >= maze.length)
         return false;
     // 2. if meet a wall, a char that represent the wall
     if (maze[curr.y][curr.x] === wall)
